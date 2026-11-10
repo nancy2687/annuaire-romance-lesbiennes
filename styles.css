@@ -1,0 +1,50 @@
+
+h1{
+  font-family: Harrington, serif;
+  font-size :30px ;
+  color: #70243B;
+  text-align: center;
+  
+
+}
+h2{
+  font-family: Harrington, serif;
+  font-size :18px ;
+  color: #70243B;
+
+}
+h3{
+  font-family: Harrington, serif;
+  font-size :16px ;
+  color: #70243B;
+
+}
+body {
+    background-color: #F8E8EC;
+	font-family: serif;
+	font-size: 12px;
+}
+
+#menu ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Contient les éléments flottants */
+    background-color: #70243B; /* Couleur de fond du menu */
+}
+
+#menu li {
+    float: left; /* Dispose les éléments horizontalement */
+}
+
+#menu li a {
+    display: block; /* Rend les liens cliquables sur toute la largeur */
+    color: #FFF9F5; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    padding: 14px 16px; /* Espacement autour du texte */
+    text-decoration: none; /* Supprime le soulignement des liens */
+}
+
+#menu li a:hover {
+    background-color: #D8AAB7; /* Couleur de fond au survol */
+}

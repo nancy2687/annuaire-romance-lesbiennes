@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Annuaire des romances lesbiennes françaises</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        /* ===== VARIABLES ===== */
+        :root {
+            --primary-color: #70243B;
+            --secondary-color: #D8AAB7;
+            --accent-color: #FFF9F5;
+            --text-color: #70243B;
+            --light-bg: #F8E8EC;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== TITRES ===== */
+        h1 {
+            font-family: arial, serif;
+            font-size: 30px;
+            color: #70243B;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: arial, serif;
+            font-size: 18px;
+            color: #70243B;
+        }
+
+        h3 {
+            font-family: arial, serif;
+            font-size: 16px;
+            color: #70243B;
+        }
+
+        /* ===== BODY ===== */
+        body {
+            background-color: #F8E8EC;
+            font-family: serif;
+            font-size: 16px;
+            color: var(--text-color);
+        }
+
+        /* ===== MENU ===== */
+        #menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #70243B;
+        }
+
+        #menu li {
+            float: left;
+        }
+
+        #menu li a {
+            display: block;
+            color: #FFF9F5;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #menu li a:hover {
+            background-color: #D8AAB7;
+        }
+
+        /* ===== EN-TÊTE ===== */
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== CONTAINER PRINCIPAL ===== */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* ===== GRILLE DES LIVRES ===== */
+        .livres-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* ===== CARTES ===== */
+        .livre-card {
+            background: #FFF9F5;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .livre-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: #70243B;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #F8E8EC, #D8AAB7);
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            margin-bottom: 0.5rem;
+            color: #70243B;
+        }
+
+        .card-content p {
+            color: #8D6673;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            .livres-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .livres-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <div id="menu">
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="#"> </a></li>
+            <li><a href="#"> </a></li>
+        </ul>
+    </div>
+
+    <!-- EN-TÊTE -->
+    <header>
+        <h1>Bienvenue sur mon site de référence de romances lesbiennes écrites en français.</h1>
+
+        <h2>Ce site sera un annuaire des différentes romances lesbiennes.</h2>
+    </header>
+
+    <!-- CATALOGUE -->
+    <div class="container">
+
+        <h3>LISTE DE ROMANCES</h3>
+
+        <h2>Romances lesbiennes — Version papier</h2>
+
+        <div class="livres-grid">
+
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Je déteste les comédies romantiques</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>De l'autre côté du couloir</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>6H22 place 108</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Escorte Moi</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Popcorn love</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>New Haven</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Porte 513</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Jeux de pouvoir</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Bleu émeraude</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Sous une étoile filante</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>A la croisée des chemins</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Faux semblants</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Seconde chance</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Pas à pas</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>La brise du désir</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Prend ma main</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Journal d'une confidente</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Mascarade</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Quand tombent les masques</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Quand Camille rencontre Oli</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Ecrire pour guérir</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Séduis-moi</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Faux numéro Vraie rencontre</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Un risque à prendre</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>The wrong McElroy</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Magie boréale</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Par delà les Astres</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Fiancée sous contrat</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Escapade Eneigée</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>L'avocate du Diable</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Un Amour pas si Aveugle</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>L'Amour au Menu</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Le chalet des coeurs givrés</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Ma lady</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Envers et contre toi</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>SOS Hôtel en détresse</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Ving ans à m'attendre</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Une Célibataire aux Enchères</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>L'Eté des Souvenirs</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Le Sel sur ta Peau</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Storm Between Us</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Pas sur ma liste</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Nos Heures dorées</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Rien que toi et moi</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>La Matinale d'Amanda Morgan</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Passion glacée</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>L'Hôtel de la Voie Lactée</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>L'Embarassante Vérité</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Le Bonheur au Bout des Doigts</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>La Mélodie des vagues</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>La Constellation des Sentiments</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Brisée à Jamais</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Les deux font la paire</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Aller de l'avent</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Au-delà des Confidences</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Mode et Confidences</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Reines(s) de Noël</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Face au Miroir</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Come and Get Your Love For Christmas</h3></div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Second Souffle</h3></div></div>
+
+        </div>
+    </div>
+
+</body>
+</html>
