@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LSF - Accueil</title>
+
+  <style>
+    body {
+      background-color: #e66bb3;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      background-color: #6495ED;
+      color: black;
+      text-decoration: none;
+      border: 2px solid #f700ff;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #fe345c;
+      color: white;
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#4a90e2">
+</head>
+
+<body>
+
+  <h1>Bienvenue sur l'application Annuaire des romances lesbiennes Françaises</h1>
+
+  <p>Retrouve les romances lesbiennes françaises facilement  📚</p>
+
+  <a class="btn" href="annuaire-romance-lesbiennes-v2.html">
+    Accéder à l'application
+  </a>
+
+  <p class="info">
+    💡 Astuce : ajoute cette application à ton écran d’accueil pour l’utiliser hors ligne.
+  </p>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+          .then((registration) => {
+            console.log("Service Worker enregistré :", registration.scope);
+          })
+          .catch((error) => {
+            console.error("Erreur Service Worker :", error);
+          });
+      });
+    }
+  </script>
+
+</body>
+</html>
