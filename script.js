@@ -186,64 +186,70 @@ async function afficherCatalogue() {
             )
         );
 
-        // ======================================
-        // AFFICHAGE DES LIVRES
-        // ======================================
+// ======================================
+// AFFICHAGE DES LIVRES
+// ======================================
 
-        catalogue.innerHTML = "";
+catalogue.innerHTML = "";
+catalogue.className = "livres-grid";
 
-        livres.forEach(livre => {
-            const auteursDuLivre = [
-                ...new Set(auteursParLivre.get(livre.ID) || [])
-            ];
+livres.forEach(livre => {
+    const auteursDuLivre = [
+        ...new Set(auteursParLivre.get(livre.ID) || [])
+    ];
 
-            const article = document.createElement("article");
-            article.className = "livre";
+    const article = document.createElement("article");
+    article.className = "livre-card";
 
-            article.innerHTML = `
-                <h2>${echapperHTML(livre.Titre || "Titre non renseigné")}</h2>
+    article.innerHTML = `
+        <div class="card-icon">
+            <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+        </div>
 
-                <p>
-                    <strong>Autrice(s) :</strong>
-                    ${echapperHTML(
-                        auteursDuLivre.join(", ") || "Non renseignée"
-                    )}
-                </p>
+        <div class="card-content">
+            <h3>${echapperHTML(livre.Titre || "Titre non renseigné")}</h3>
 
-                <p>
-                    <strong>Prix papier :</strong>
-                    ${
-                        livre.PrixHTb
-                            ? echapperHTML(
-                                livre.PrixHTb.replace(".", ",")
-                            ) + " €"
-                            : "Non renseigné"
-                    }
-                </p>
+            <p>
+                <strong>Autrice(s) :</strong>
+                ${echapperHTML(
+                    auteursDuLivre.join(", ") || "Non renseignée"
+                )}
+            </p>
 
-                <p>
-                    <strong>Date de sortie :</strong>
-                    ${echapperHTML(afficherDate(livre.Date_sortie))}
-                </p>
+            <p>
+                <strong>Prix papier :</strong>
+                ${
+                    livre.PrixHTb
+                        ? echapperHTML(livre.PrixHTb.replace(".", ",")) + " €"
+                        : "Non renseigné"
+                }
+            </p>
 
-                <p>
-                    <strong>Genre :</strong>
-                    ${echapperHTML(
-                        genresParId.get(livre["Id-genre"]) || "Non renseigné"
-                    )}
-                </p>
+            <p>
+                <strong>Date de sortie :</strong>
+                ${echapperHTML(afficherDate(livre.Date_sortie))}
+            </p>
 
-                <p>
-                    <strong>Éditeur :</strong>
-                    ${echapperHTML(
-                        editeursParId.get(livre["Id-éditeur"]) || "Non renseigné"
-                    )}
-                </p>
-            `;
+            <p>
+                <strong>Genre :</strong>
+                ${echapperHTML(
+                    genresParId.get(livre["Id-genre"]) || "Non renseigné"
+                )}
+            </p>
 
-            catalogue.appendChild(article);
-        });
+            <p>
+                <strong>Éditeur :</strong>
+                ${echapperHTML(
+                    editeursParId.get(livre["Id-éditeur"]) || "Non renseigné"
+                )}
+            </p>
+        </div>
+    `;
 
+    catalogue.appendChild(article);
+});
+
+        
         // ======================================
         // COMPTEUR DE LIVRES
         // ======================================
