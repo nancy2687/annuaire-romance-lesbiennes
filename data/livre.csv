@@ -1,69 +1,69 @@
-"ID","Titre","PrixHTb","Date_sortie","Id-genre","Id-éditeur"
-"1","Le chalet des coeurs givrés","19.90","2026-11-17","1","1"
-"2","Ma Lady","20.90","2026-11-10","1","1"
-"3","Je déteste les comédies romantiques",NULL,NULL,"1","2"
-"4","De l'autre côté du couloir","19.90","2025-11-18","1","1"
-"5","6H22 place 108","19.90","2015-10-27","1","1"
-"6","Escorte Moi","19.90","2019-07-16","1","1"
-"7","Popcorn love","19.90","2016-12-06","1","1"
-"8","New Haven",NULL,"2018-06-18","1","1"
-"9","Porte 513","19.90","2023-09-19","1","1"
-"10","Jeux de pouvoir","19.90","2023-04-27","1","1"
-"11","Bleu émeraude","13.90","2017-08-25","1","1"
-"12","Sous une étoile filante","19.90","2020-12-04","1","1"
-"13","A la croisée des chemins","19.90","2019-05-14","1","1"
-"14","Faux semblants","17.90","2017-08-01","1","1"
-"15","Seconde chance",NULL,"2015-09-15","1","1"
-"16","Pas à pas","19.90","2019-12-12","1","1"
-"17","La brise du désir","13.90","2016-09-20","1","1"
-"18","Prend ma main","20.90","2024-04-30","1","1"
-"19","Journal d'une confidente",NULL,"2016-05-17","1","1"
-"20","Mascarade","19.90",NULL,"1","1"
-"21","Quand tombent les masques","19.90","2018-02-05","1","1"
-"22","Quand Camille rencontre Oli","19.90","2021-05-06","1","1"
-"23","Ecrire pour guérir","20.90","2024-02-01","1","1"
-"24","Séduis-moi","19.90","2022-09-15","1","1"
-"25","Faux numéro Vraie rencontre","19.90","2022-10-21","1","1"
-"26","Un risque à prendre","19.90","2022-05-31","1","1"
-"27","The wrong McElroy","19.90","2020-11-13","1","1"
-"28","Magie boréale","19.90",NULL,"1","1"
-"29","Par delà les Astres","17.90","2017-04-04","1","1"
-"30","Fiancée sous contrat","19.90","2021-09-30","1","1"
-"31","Escapade Eneigée","19.90","2021-11-25","1","1"
-"32","L'avocate du Diable","20.90","2024-03-14","1","1"
-"33","Un Amour pas si Aveugle","19.90","2023-11-16","1","1"
-"34","L'Amour au Menu","19.90","2023-02-08","1","1"
-"35","Envers et contre toi","20.90","2026-10-20","1","1"
-"36","SOS Hôtel en détresse","20.90","2026-10-13","1","1"
-"37","Ving ans à m'attendre","20.90","2026-09-08","1","1"
-"38","Une Célibataire aux Enchères","20.90","2026-09-01","1","1"
-"39","L'Eté des Souvenirs","20.90","2026-06-02","1","1"
-"40","Le Sel sur ta Peau","19.90","2026-05-12","1","1"
-"41","Storm Between Us","19.90","2026-04-28","1","1"
-"42","Pas sur ma liste","20.90","2026-04-07","1","1"
-"43","Nos Heures dorées","20.90","2026-03-17","1","1"
-"44","Rien que toi et moi","19.90","2026-02-03","1","1"
-"45","La Matinale d'Amanda Morgan","20.90","2026-01-13","1","1"
-"46","Passion glacée","20.90","2025-12-02","1","1"
-"47","L'Hôtel de la Voie Lactée","20.90","2025-11-04","1","1"
-"48","L'Embarassante Vérité","21.90","2025-10-14","1","1"
-"49","Le Bonheur au Bout des Doigts","21.90","2025-09-02","1","1"
-"50","La Mélodie des vagues","19.90","2025-06-17","1","1"
-"51","La Constellation des Sentiments","20.90","2025-06-03","1","1"
-"52","Brisée à Jamais","20.90","2025-04-22","1","1"
-"53","Les deux font la paire","20.90","2025-03-04","1","1"
-"54","Aller de l'avant","19.90","2025-02-04","1","1"
-"55","Au-delà des Confidences","19.90","2025-01-16","1","1"
-"56","Mode et Confidences","20.90","2025-01-07","1","1"
-"57","Reines(s) de Noël","19.90","2024-12-12","1","1"
-"58","Face au Miroir","20.90","2024-12-03","1","1"
-"59","Come and Get Your Love For Christmas","19.90","2024-11-19","1","1"
-"60","Second Souffle","19.90","2024-11-05","1","1"
-"61","Coming out en série","19.90","2026-03-03","1","1"
-"63","De l'ombre à la lumière","17.90","2024-10-15","1","1"
-"64","Coeurs en décalage","19.90","2024-09-24","1","1"
-"65","25ans et 34jours","20.90","2024-06-18","1","1"
-"67","Deuxième tiroir à droite",NULL,NULL,"1","1"
-"68","Où se cachent les abeilles","17.90","2019-01-28","1","1"
-"69","Jasmin",NULL,NULL,"1","1"
-"71","Aimer n'est pas jouer",NULL,"2017-06-27","1","1"
+ID,Titre,PrixHTb,Date_sortie,Id-genre,Id-éditeur
+1,Le chalet des coeurs givrés,19.90,2026-11-17,1,1
+2,Ma Lady,20.90,2026-11-10,1,1
+3,Je déteste les comédies romantiques,,,1,2
+4,De l'autre côté du couloir,19.90,2025-11-18,1,1
+5,6H22 place 108,19.90,2015-10-27,1,1
+6,Escorte Moi,19.90,2019-07-16,1,1
+7,Popcorn love,19.90,2016-12-06,1,1
+8,New Haven,,2018-06-18,1,1
+9,Porte 513,19.90,2023-09-19,1,1
+10,Jeux de pouvoir,19.90,2023-04-27,1,1
+11,Bleu émeraude,13.90,2017-08-25,1,1
+12,Sous une étoile filante,19.90,2020-12-04,1,1
+13,A la croisée des chemins,19.90,2019-05-14,1,1
+14,Faux semblants,17.90,2017-08-01,1,1
+15,Seconde chance,,2015-09-15,1,1
+16,Pas à pas,19.90,2019-12-12,1,1
+17,La brise du désir,13.90,2016-09-20,1,1
+18,Prend ma main,20.90,2024-04-30,1,1
+19,Journal d'une confidente,,2016-05-17,1,1
+20,Mascarade,19.90,,1,1
+21,Quand tombent les masques,19.90,2018-02-05,1,1
+22,Quand Camille rencontre Oli,19.90,2021-05-06,1,1
+23,Ecrire pour guérir,20.90,2024-02-01,1,1
+24,Séduis-moi,19.90,2022-09-15,1,1
+25,Faux numéro Vraie rencontre,19.90,2022-10-21,1,1
+26,Un risque à prendre,19.90,2022-05-31,1,1
+27,The wrong McElroy,19.90,2020-11-13,1,1
+28,Magie boréale,19.90,,1,1
+29,Par delà les Astres,17.90,2017-04-04,1,1
+30,Fiancée sous contrat,19.90,2021-09-30,1,1
+31,Escapade Eneigée,19.90,2021-11-25,1,1
+32,L'avocate du Diable,20.90,2024-03-14,1,1
+33,Un Amour pas si Aveugle,19.90,2023-11-16,1,1
+34,L'Amour au Menu,19.90,2023-02-08,1,1
+35,Envers et contre toi,20.90,2026-10-20,1,1
+36,SOS Hôtel en détresse,20.90,2026-10-13,1,1
+37,Ving ans à m'attendre,20.90,2026-09-08,1,1
+38,Une Célibataire aux Enchères,20.90,2026-09-01,1,1
+39,L'Eté des Souvenirs,20.90,2026-06-02,1,1
+40,Le Sel sur ta Peau,19.90,2026-05-12,1,1
+41,Storm Between Us,19.90,2026-04-28,1,1
+42,Pas sur ma liste,20.90,2026-04-07,1,1
+43,Nos Heures dorées,20.90,2026-03-17,1,1
+44,Rien que toi et moi,19.90,2026-02-03,1,1
+45,La Matinale d'Amanda Morgan,20.90,2026-01-13,1,1
+46,Passion glacée,20.90,2025-12-02,1,1
+47,L'Hôtel de la Voie Lactée,20.90,2025-11-04,1,1
+48,L'Embarassante Vérité,21.90,2025-10-14,1,1
+49,Le Bonheur au Bout des Doigts,21.90,2025-09-02,1,1
+50,La Mélodie des vagues,19.90,2025-06-17,1,1
+51,La Constellation des Sentiments,20.90,2025-06-03,1,1
+52,Brisée à Jamais,20.90,2025-04-22,1,1
+53,Les deux font la paire,20.90,2025-03-04,1,1
+54,Aller de l'avant,19.90,2025-02-04,1,1
+55,Au-delà des Confidences,19.90,2025-01-16,1,1
+56,Mode et Confidences,20.90,2025-01-07,1,1
+57,Reines(s) de Noël,19.90,2024-12-12,1,1
+58,Face au Miroir,20.90,2024-12-03,1,1
+59,Come and Get Your Love For Christmas,19.90,2024-11-19,1,1
+60,Second Souffle,19.90,2024-11-05,1,1
+61,Coming out en série,19.90,2026-03-03,1,1
+63,De l'ombre à la lumière,17.90,2024-10-15,1,1
+64,Coeurs en décalage,19.90,2024-09-24,1,1
+65,25ans et 34jours,20.90,2024-06-18,1,1
+67,Deuxième tiroir à droite,,,1,1
+68,Où se cachent les abeilles,17.90,2019-01-28,1,1
+69,Jasmin,,,1,1
+71,Aimer n'est pas jouer,,2017-06-27,1,1
