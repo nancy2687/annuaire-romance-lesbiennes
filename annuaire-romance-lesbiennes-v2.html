@@ -1,4 +1,4 @@
-teste les comédies roma    n
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,163 +6,12 @@ teste les comédies roma    n
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Annuaire des romances lesbiennes françaises</title>
-
-    <!-- Font Awesome -->
+<link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	-->
 
-    <style>
-
-        /* ===== VARIABLES ===== */
-        :root {
-            --primary-color: #70243B;
-            --secondary-color: #D8AAB7;
-            --accent-color: #FFF9F5;
-            --text-color: #70243B;
-            --light-bg: #F8E8EC;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --border-radius: 10px;
-            --transition: all 0.3s ease;
-        }
-
-        /* ===== RESET ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* ===== TITRES ===== */
-        h1 {
-            font-family: arial, serif;
-            font-size: 30px;
-            color: #70243B;
-            text-align: center;
-        }
-
-        h2 {
-            font-family: arial, serif;
-            font-size: 18px;
-            color: #70243B;
-        }
-
-        h3 {
-            font-family: arial, serif;
-            font-size: 16px;
-            color: #70243B;
-        }
-
-        /* ===== BODY ===== */
-        body {
-            background-color: #F8E8EC;
-            font-family: serif;
-            font-size: 16px;
-            color: var(--text-color);
-        }
-
-        /* ===== MENU ===== */
-        #menu ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #70243B;
-        }
-
-        #menu li {
-            float: left;
-        }
-
-        #menu li a {
-            display: block;
-            color: #FFF9F5;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        #menu li a:hover {
-            background-color: #D8AAB7;
-        }
-
-        /* ===== EN-TÊTE ===== */
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-
-        header h1 {
-            margin-bottom: 0.5rem;
-        }
-
-        /* ===== CONTAINER PRINCIPAL ===== */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        /* ===== GRILLE DES LIVRES ===== */
-        .livres-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-
-        /* ===== CARTES ===== */
-        .livre-card {
-            background: #FFF9F5;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .livre-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            color: #70243B;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #F8E8EC, #D8AAB7);
-        }
-
-        .card-content {
-            padding: 1rem;
-        }
-
-        .card-content h3 {
-            margin-bottom: 0.5rem;
-            color: #70243B;
-        }
-
-        .card-content p {
-            color: #8D6673;
-            font-size: 0.9rem;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 26px;
-            }
-
-            .livres-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .livres-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
+  
 </head>
 
 <body>
@@ -170,7 +19,7 @@ teste les comédies roma    n
     <!-- MENU -->
     <div id="menu">
         <ul>
-            <li><a href="index.html">Accueil application </a></li>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="#"> </a></li>
             <li><a href="#"> </a></li>
         </ul>
@@ -190,11 +39,9 @@ teste les comédies roma    n
 
         <h2>Romances lesbiennes — Version papier</h2>
 
-        <div class="livres-grid">
+     <!--   <div class="livres-grid">
 
-            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Je déteste les comédies romantiques</h3>
-                <a href="https://www.babelio.com/livres/Smyth-Je-deteste-les-comedies-romantiques/1459980">Je déteste les comédie romantiques </a>
-            </div></div>
+            <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Je déteste les comédies romantiques</h3></div></div>
             <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>De l'autre côté du couloir</h3></div></div>
             <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>6H22 place 108</h3></div></div>
             <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Escorte Moi</h3></div></div>
@@ -256,7 +103,10 @@ teste les comédies roma    n
             <div class="livre-card"><div class="card-icon"><i class="fa-solid fa-book-open"></i></div><div class="card-content"><h3>Second Souffle</h3></div></div>
 
         </div>
-    </div>
+    </div> -->
+	<section id="catalogue"></section>
+
+   <script src="script.js" defer></script>
 
 </body>
 </html>

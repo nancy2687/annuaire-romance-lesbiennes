@@ -1,79 +1,162 @@
-const CACHE_NAME = "lsf-cache-safe-v2";
 
-const urlsToCache = [
-  "./",
-  "./index.html",
-  "./presentation-de-la-LSF-1.html",
-  "./histoire-de-la-lsf-2.html",
-  "./mots-de-base-et-vocabulaire-3.html",
-  "./calendrier-en-lsf-4.html",
-  "./image-LSF.png",
-  "./image-abbee-de-lepee.jpg",
-  "./dactylologie.jpg",
-  "./Politesse_signaire.jpg"
+// ========================================
+// ANNUAIRE DES ROMANCES LESBIENNES
+// SERVICE WORKER
+// ========================================
+
+const CACHE_NAME = "annuaire-romance-v1";
+
+const FICHIERS_A_CACHER = [
+    "./",
+    "./index.html",
+    "./style.css",
+    "./script.js",
+
+    // Données du catalogue
+    "./data/livre.csv",
+    "./data/auteurs.csv",
+    "./data/ecrits.csv",
+    "./data/genres.csv",
+    "./data/editeurs.csv"
 ];
 
-// INSTALL → cache simple (sans tout casser si erreur)
+
+// ========================================
+// INSTALLATION
+// ========================================
+
 self.addEventListener("install", (event) => {
-  self.skipWaiting();
 
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(async (cache) => {
-      for (const url of urlsToCache) {
-        try {
-          await cache.add(url);
-        } catch (e) {
-          console.warn("Erreur cache :", url);
-        }
-      }
-    })
-  );
-});
+    self.skipWaiting();
 
-// ACTIVATE → prend le contrôle immédiatement
-self.addEventListener("activate", (event) => {
-  event.waitUntil(
-    caches.keys().then((names) =>
-      Promise.all(
-        names.map((name) => {
-          if (name !== CACHE_NAME) {
-            return caches.delete(name);
-          }
+    event.waitUntil(
+        caches.open(CACHE_NAME).then(async (cache) => {
+
+            for (const fichier of FICHIERS_A_CACHER) {
+
+                try {
+                    const url = new URL(fichier, self.registration.scope);
+                    await cache.add(url);
+
+                } catch (erreur) {
+                    console.warn(
+                        "Impossible de mettre en cache :",
+                        fichier,
+                        erreur
+                    );
+                }
+
+            }
+
         })
-      )
-    )
-  );
+    );
 
-  self.clients.claim();
 });
 
-// FETCH → stratégie SAFARI SAFE
+
+// ========================================
+// ACTIVATION
+// ========================================
+
+self.addEventListener("activate", (event) => {
+
+    event.waitUntil(
+        caches.keys().then((noms) => {
+
+            return Promise.all(
+
+                noms.map((nom) => {
+
+                    // Supprime uniquement les anciennes versions
+                    // du cache de cet annuaire.
+
+                    if (
+                        nom.startsWith("annuaire-romance-") &&
+                        nom !== CACHE_NAME
+                    ) {
+                        return caches.delete(nom);
+                    }
+
+                })
+
+            );
+
+        }).then(() => self.clients.claim())
+    );
+
+});
+
+
+// ========================================
+// REQUÊTES ET MODE HORS LIGNE
+// ========================================
+
 self.addEventListener("fetch", (event) => {
-  // IMPORTANT : ignorer certaines requêtes problématiques
-  if (event.request.method !== "GET") return;
 
-  event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        // met en cache seulement si OK
-        if (response && response.status === 200 && response.type === "basic") {
-          const responseClone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
-          });
-        }
-        return response;
-      })
-      .catch(() => {
-        // fallback cache si offline
-        return caches.match(event.request).then((response) => {
-          if (response) return response;
+    const requete = event.request;
 
-          // fallback page principale
-          if (event.request.destination === "document") {
-            return caches.match("./presentation-de-la-LSF-1.html");
-          }
-        });
-      })
-  );
+    // Ignore les requêtes autres que GET
+    if (requete.method !== "GET") return;
+
+    const url = new URL(requete.url);
+
+    // Ignore les requêtes externes
+    if (url.origin !== self.location.origin) return;
+
+    // Ignore les requêtes hors du périmètre du SW
+    if (!url.href.startsWith(self.registration.scope)) return;
+
+    event.respondWith(
+
+        fetch(requete)
+
+            .then((reponse) => {
+
+                // Mise en cache des réponses valides
+                if (reponse && reponse.status === 200 && reponse.type === "basic") {
+
+                    const copie = reponse.clone();
+
+                    caches.open(CACHE_NAME).then((cache) => {
+                        cache.put(requete, copie);
+                    });
+
+                }
+
+                return reponse;
+
+            })
+
+            .catch(async () => {
+
+                // Recherche dans le cache
+                const reponseCache = await caches.match(requete);
+
+                if (reponseCache) {
+                    return reponseCache;
+                }
+
+                // Secours pour les pages HTML
+                if (requete.mode === "navigate") {
+
+                    return await caches.match(
+                        new URL("./index.html", self.registration.scope).toString()
+                    );
+
+                }
+
+                return new Response(
+                    "Contenu indisponible hors ligne.",
+                    {
+                        status: 503,
+                        headers: {
+                            "Content-Type": "text/plain; charset=utf-8"
+                        }
+                    }
+                );
+
+            })
+
+    );
+
 });
